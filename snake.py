@@ -1,7 +1,6 @@
 import turtle
 import random
 import time
-import winsound
 
 delay = 0.1
 
@@ -10,18 +9,74 @@ high_score = 0
 
 wn = turtle.Screen()
 wn.title("Snake Game")
-wn.bgcolor("blue")
+wn.bgcolor("green")
 wn.setup(width=600, height=600)
 wn.tracer(0)
 
 segments= []
+
+obj1= turtle.Turtle()
+obj1.speed(9)
+obj1.shape("triangle")
+obj1.color("red")
+obj1.penup()
+obj1.goto(-100 , 190) 
+
+obj2= turtle.Turtle()
+obj2.speed(9)
+obj2.shape("triangle")
+obj2.color("red")
+obj2.penup()
+obj2.goto(-200 , 75)
+
+obj3= turtle.Turtle()
+obj3.speed(9)
+obj3.shape("triangle")
+obj3.color("red")
+obj3.penup()
+obj3.goto(100 , -190)
+
+obj4= turtle.Turtle()
+obj4.speed(9)
+obj4.shape("triangle")
+obj4.color("red")
+obj4.penup()
+obj4.goto(200 , -75)
+
+obj5= turtle.Turtle()
+obj5.speed(9)
+obj5.shape("triangle")
+obj5.color("red")
+obj5.penup()
+obj5.goto(100 , 190)
+
+obj6= turtle.Turtle()
+obj6.speed(9)
+obj6.shape("triangle")
+obj6.color("red")
+obj6.penup()
+obj6.goto(200 , 75)
+
+obj7= turtle.Turtle()
+obj7.speed(9)
+obj7.shape("triangle")
+obj7.color("red")
+obj7.penup()
+obj7.goto(-100 , -190)
+
+obj8= turtle.Turtle()
+obj8.speed(9)
+obj8.shape("triangle")
+obj8.color("red")
+obj8.penup()
+obj8.goto(-190 , -75)
 
 
 
 head = turtle.Turtle()
 head.speed(0)
 head.shape("square")
-head.color("red")
+head.color("grey")
 head.penup()
 head.goto(0,0)
 head.direction = "stop"
@@ -30,7 +85,7 @@ head.direction = "stop"
 food = turtle.Turtle()
 food.speed(0)
 food.shape("circle")
-food.color("black")
+food.color("pink")
 food.penup()
 head.goto(1,100)
 
@@ -89,6 +144,169 @@ while True:
 
     #to check collision with boarder
     if head.xcor()>290 or head.xcor()<-290 or head.ycor()>290 or head.ycor()<-290 :
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        #hide segment
+        for seg in segments:
+            seg.goto(1000 , 1000)
+
+        #clear the segment list
+        segments.clear()
+
+        #Reset the score
+        score=0
+        pen.clear()
+        pen.write("Score: {}   High Score: {}".format(score,high_score),align="center",font=("courier",24,"normal"))
+
+
+    #obstacles1
+    if head.distance(obj1) < 20 :
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        #hide segment
+        for seg in segments:
+            seg.goto(1000 , 1000)
+
+        #clear the segment list
+        segments.clear()
+
+        #Reset the score
+        score=0
+        pen.clear()
+        pen.write("Score: {}   High Score: {}".format(score,high_score),align="center",font=("courier",24,"normal"))
+
+    #obstacles2
+    if head.distance(obj2) < 20 :
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        #hide segment
+        for seg in segments:
+            seg.goto(1000 , 1000)
+
+        #clear the segment list
+        segments.clear()
+
+        #Reset the score
+        score=0
+        pen.clear()
+        pen.write("Score: {}   High Score: {}".format(score,high_score),align="center",font=("courier",24,"normal"))
+
+    #obstacles1
+    if head.distance(obj3) < 20 :
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        #hide segment
+        for seg in segments:
+            seg.goto(1000 , 1000)
+
+        #clear the segment list
+        segments.clear()
+
+        #Reset the score
+        score=0
+        pen.clear()
+        pen.write("Score: {}   High Score: {}".format(score,high_score),align="center",font=("courier",24,"normal"))
+
+    #obstacles1
+    if head.distance(obj4) < 20 :
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        #hide segment
+        for seg in segments:
+            seg.goto(1000 , 1000)
+
+        #clear the segment list
+        segments.clear()
+
+        #Reset the score
+        score=0
+        pen.clear()
+        pen.write("Score: {}   High Score: {}".format(score,high_score),align="center",font=("courier",24,"normal"))
+
+    #obstacles1
+    if head.distance(obj4) < 20 :
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        #hide segment
+        for seg in segments:
+            seg.goto(1000 , 1000)
+
+        #clear the segment list
+        segments.clear()
+
+        #Reset the score
+        score=0
+        pen.clear()
+        pen.write("Score: {}   High Score: {}".format(score,high_score),align="center",font=("courier",24,"normal"))
+
+    #obstacles1
+    if head.distance(obj5) < 20 :
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        #hide segment
+        for seg in segments:
+            seg.goto(1000 , 1000)
+
+        #clear the segment list
+        segments.clear()
+
+        #Reset the score
+        score=0
+        pen.clear()
+        pen.write("Score: {}   High Score: {}".format(score,high_score),align="center",font=("courier",24,"normal"))
+
+    #obstacles1
+    if head.distance(obj6) < 20 :
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        #hide segment
+        for seg in segments:
+            seg.goto(1000 , 1000)
+
+        #clear the segment list
+        segments.clear()
+
+        #Reset the score
+        score=0
+        pen.clear()
+        pen.write("Score: {}   High Score: {}".format(score,high_score),align="center",font=("courier",24,"normal"))
+
+    #obstacles1
+    if head.distance(obj7) < 20 :
+        time.sleep(1)
+        head.goto(0,0)
+        head.direction = "stop"
+
+        #hide segment
+        for seg in segments:
+            seg.goto(1000 , 1000)
+
+        #clear the segment list
+        segments.clear()
+
+        #Reset the score
+        score=0
+        pen.clear()
+        pen.write("Score: {}   High Score: {}".format(score,high_score),align="center",font=("courier",24,"normal"))
+
+    #obstacles1
+    if head.distance(obj8) < 20 :
         time.sleep(1)
         head.goto(0,0)
         head.direction = "stop"
